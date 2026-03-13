@@ -41,6 +41,6 @@ for team,team_id in teams.items():
                 print(f"Error for:{team} {season}!!!")
 
         except Exception as e:
-                    print(f"Błąd połączenia: {e}")
+                    print(f"Connection error: {e}")
 
         

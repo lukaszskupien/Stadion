@@ -58,8 +58,6 @@ for team_name,team in teams.items():
     ax[1].set_ylabel("number")
     plt.savefig(fname=f"data/plots/{team_name+"_barplot"}")
 
-    
-
 
 stats = pd.DataFrame(stats)
 print(stats)
@@ -68,8 +66,6 @@ bolivia_diff = stats.loc[stats["team"] == "bolivia","points_diff"].iloc[0]
 p_value = np.mean( others >= bolivia_diff )
 
 plt.figure(figsize=(12,6))
-
-
 
 sns.stripplot(
     data=matches[matches["venue"]=="H"],
@@ -104,3 +100,4 @@ plt.title("Away match result vs opponent strength")
 
 plt.legend(title="Result")
 plt.savefig("data/plots/away_stripplot")
+plt.show()
